@@ -1,0 +1,18 @@
+cd firstApp
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/courses', function () {
+    return "Welcome to the courses";
+});
+
+Route::get('/courses/{variable}', function ($variable) {
+    return "Welcome to the courses: " . $variable;
+});
+
+Route::get('/courses/{variable1}/{variable2}', function ($variable1, $variable2) {
+    return "Welcome to the courses: " . $variable1 . ", of the category: " . $variable2;
+});
