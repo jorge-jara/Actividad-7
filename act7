@@ -1,4 +1,5 @@
 cd firstApp
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -9,10 +10,10 @@ Route::get('/courses', function () {
     return "Welcome to the courses";
 });
 
-Route::get('/courses/{variable}', function ($variable) {
-    return "Welcome to the courses: " . $variable;
+Route::get('/courses/{courseName}', function ($courseName) {
+    return "Welcome to the courses: " . $courseName;
 });
 
-Route::get('/courses/{variable1}/{variable2}', function ($variable1, $variable2) {
-    return "Welcome to the courses: " . $variable1 . ", of the category: " . $variable2;
+Route::get('/courses/{courseName}/{category}', function ($courseName, $category) {
+    return "Welcome to the courses: " . $courseName . ", of the category: " . $category;
 });
